@@ -1,1 +1,1 @@
-# PGMBot
+This repository houses files pertaining to an AI powered chatbot that is targeted to service inquiries from Project leads, managers on various operations handled by a horizontal Project Management Office Team. 
