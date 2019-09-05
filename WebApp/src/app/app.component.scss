@@ -1,0 +1,11 @@
+.route-container {
+  height: calc(100vh - 144px);
+
+  background-image: url("/assets/images/home_bg.jpg");
+  background-position: center;
+}
+@media only screen and (max-width: 768px) {
+  .route-container {
+    height: calc(100vh - 89px);
+  }
+}

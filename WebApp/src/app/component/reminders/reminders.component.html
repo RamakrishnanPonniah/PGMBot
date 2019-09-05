@@ -1,0 +1,39 @@
+<div class="reminder-container">
+  <div class="reminder-header">
+    <div class="reminder-title">Reminders</div>
+  </div>
+  <div class="reminder-row">
+    <div class="reminder-card-column" *ngFor="let card of yellowCards">
+      <div class="reminder-card reminder-card-yellow">
+        <header class="reminder-card-header">
+          <h5>{{ card.date }}</h5>
+        </header>
+
+        <div class="reminder-card-container">
+          <p>{{ card.description }}</p>
+        </div>
+
+        <footer class="reminder-card-footer">
+          <h5>{{ card.type }}</h5>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <div class="reminder-row">
+    <div class="reminder-card-column" *ngFor="let card of yellowCards">
+      <div class="reminder-card reminder-card-green">
+        <header class="reminder-card-header">
+          <h5>{{ card.date }}</h5>
+        </header>
+
+        <div class="reminder-card-container">
+          <p>{{ card.description }}</p>
+        </div>
+
+        <footer class="reminder-card-footer">
+          <h5>{{ card.type }}</h5>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>

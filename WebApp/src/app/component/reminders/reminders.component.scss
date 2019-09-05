@@ -1,0 +1,63 @@
+.reminder-container {
+  height: 100%;
+  .reminder-header {
+    width: 100%;
+    background-color: #666;
+    text-align: center;
+    height: 50px;
+    .reminder-title {
+      font: normal normal normal 25px/1.25em fantasy;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+}
+.reminder-row {
+  display: flex;
+  .reminder-card-column {
+    flex: 1;
+    padding: 10px;
+    .reminder-card {
+      width: 60%;
+      margin: auto;
+      padding: 10px;
+      box-shadow: 0px 0px 10px 0px white;
+      border-radius: 10px;
+      h5 {
+        margin: 0 !important;
+      }
+      .reminder-card-header {
+        text-align: center;
+      }
+
+      .reminder-card-container {
+        font-size: 0.9rem;
+      }
+
+      .reminder-card-footer {
+        text-align: center;
+      }
+    }
+    .reminder-card-green {
+      background: green;
+    }
+    .reminder-card-yellow {
+      background: yellow;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .reminder-container {
+    overflow: scroll;
+    height: calc(100% - 70px);
+    padding-top: 25px;
+  }
+  .reminder-row {
+    flex-direction: column;
+  }
+
+  .reminder-card-column:first-child {
+    padding-top: 25px;
+  }
+}

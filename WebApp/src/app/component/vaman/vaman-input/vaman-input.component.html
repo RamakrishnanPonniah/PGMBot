@@ -1,0 +1,13 @@
+<textarea
+  type="text"
+  class="vaman-input-text"
+  placeholder="Type message..."
+  [(ngModel)]="inputText"
+  #message
+  (keydown.enter)="onSubmit()"
+  (keyup.enter)="message.value = ''"
+  (keyup.escape)="dismiss.emit()"
+></textarea>
+<button type="submit" class="vaman-input-submit" (click)="onSubmit()">
+  {{ buttonText }}
+</button>

@@ -1,0 +1,35 @@
+.vaman-input-text {
+  margin: 14px 0 0 14px;
+  height: 25px;
+  width: calc(100% - 80px);
+  border: 0;
+  resize: none;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  font-size: 14px;
+  background-color: inherit;
+  color: inherit;
+}
+
+.vaman-input-text::-webkit-input-placeholder {
+  color: inherit;
+}
+.vaman-input-text::-moz-placeholder {
+  color: inherit;
+}
+.vaman-input-text::-ms-input-placeholder {
+  color: inherit;
+}
+
+.vaman-input-submit {
+  cursor: pointer;
+  margin: 14px 12px;
+  float: right;
+  background-color: inherit;
+  color: inherit;
+  font-size: 24px;
+  border: 0;
+  outline: none;
+}

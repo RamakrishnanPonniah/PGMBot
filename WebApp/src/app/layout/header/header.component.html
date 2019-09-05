@@ -1,0 +1,32 @@
+<div class="header" *ngIf="!mobileQuery.matches">
+  <div class="header-heading" (click)="navToEntry()">
+    <img src="../../assets/images/SSR.png" />
+    <span>KH-PGM : SELF SERVICE PLATFORM</span>
+  </div>
+  <div class="header-logo" style="float:right;">
+    <img src="../../assets/images/NAP.png" width="125" height="94" />
+  </div>
+</div>
+<div class="mobile-header" *ngIf="mobileQuery.matches">
+  <div class="mobile-header-heading" (click)="navToEntry()">
+    <span>KH-PGM : SELF SERVICE PLATFORM</span>
+  </div>
+  <div class="mobile-header-logo" style="top:0; float:right;">
+    <img src="../../assets/images/NAP.png" width="60px" height="60px" />
+  </div>
+  <div class="mobile-nav-container" *ngIf="isNavAllowed">
+    <div class="mobile-nav-button mobile-nav-button-down" (click)="toggle()">
+      <fa name="angle-double-down"></fa>
+    </div>
+    <div class="mobile-link-container" [class.active]="openMenu">
+      <div class="mobile-link" *ngFor="let link of routeOptions">
+        <a class="btn btn-primary btn-lg" (click)="navigateToUrl(link)">
+          {{ routeData[link].name }}
+        </a>
+      </div>
+      <div class="mobile-nav-button mobile-nav-button-up" (click)="toggle()">
+        <fa name="angle-double-up"></fa>
+      </div>
+    </div>
+  </div>
+</div>

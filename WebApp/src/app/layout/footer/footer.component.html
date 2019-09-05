@@ -1,0 +1,70 @@
+<div class="footer">
+  <div class="footer-container" *ngIf="isNavAllowed">
+    <div *ngFor="let link of routeOptions">
+      <a class="btn btn-primary btn-lg" (click)="navigateToUrl(link)">
+        <span class="glyphicon glyphicon-home"></span>
+        {{ routeData[link].name }}
+      </a>
+    </div>
+  </div>
+  <div class="footer-heading">
+    <span>Accenture ©2019. Proudly brought to you by PGM & Innovators.</span>
+  </div>
+
+  <div class="log-out" *ngIf="isLogOut">
+    <fa name="power-off" (click)="logout()"></fa>
+  </div>
+  <div class="footer-button">
+    <div class="feedback" (click)="toggle(true)">
+      <a role="button">
+        <span>Feedback</span>
+      </a>
+    </div>
+    <div class="contact-us">
+      <a class="contact-us-link" href="mailto:BOFA.PGM@accenture.com" target="_self" data-content="kh.pgm@acc.com"
+        data-type="mail" role="button">
+        <span>Contact Us</span>
+      </a>
+    </div>
+  </div>
+  <div class="mobile-footer-button">
+    <div (click)="toggle(true)">
+      <a role="button">
+        <span>Feedback</span>
+      </a>
+    </div>
+    <div>
+      <a class="contact-us-link" href="mailto:BOFA.PGM@accenture.com" target="_self" data-content="kh.pgm@acc.com"
+        data-type="mail" role="button">
+        <span>Contact Us</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="feedback-popup-overlay" *ngIf="feedbackPopup" (click)="toggle(false)"></div>
+<div class="feedback-popup" [class.feedback-popup-visible]="feedbackPopup">
+  <div class="feedback-popup-title">
+    <h2>Feedback</h2>
+  </div>
+  <div class="feedback-popup-form">
+    <form>
+      <div class="feedback-form-group">
+        <label for="feedback-recipient-name" class="feedback-col-form-label">Title:</label>
+        <input type="text" maxlength="200" placeholder="Please enter the title..." class="feedback-form-control"
+          id="recipient-name" />
+      </div>
+      <div class="feedback-form-group">
+        <label for="feedback-message-text" class="feedback-col-form-label">Your Detailed Feedback :</label>
+        <textarea class="feedback-form-control" maxlength="500" id="message-text" required=""
+          placeholder="Please write your feedback here..."></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="feedback-popup-footer">
+    <div class="form-group">
+      <button type="button" class="contactus" data-toggle="modal" data-target="#myModal1">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+.announcement-container {
+  height: 100%;
+  .announcement-header {
+    width: 100%;
+    background-color: #666;
+    text-align: center;
+    .announcement-title {
+      font: normal normal normal 25px/1.25em fantasy;
+      color: white;
+      text-align: center;
+      line-height: 1.35em;
+    }
+    .announcement-description {
+      padding: 10px;
+      color: #ffcf79;
+      font-weight: bolder;
+      font-size: 13px;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    padding: 20px 0;
+    height: 30%;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    .carousel-slide {
+      height: 150px;
+      overflow: hidden;
+      > div {
+        position: absolute;
+        min-width: 100%;
+        left: 200%;
+        transition: 1s;
+        display: none;
+        h1 {
+          margin: 0;
+        }
+      }
+      .previous-slide {
+        display: block;
+        left: -200%;
+      }
+      .current-slide {
+        display: block;
+        left: 0;
+      }
+      .next-slide {
+        display: block;
+        right: -200%;
+      }
+    }
+    .block {
+      border-radius: 10px;
+      box-shadow: 0px 0px 12px white;
+      background-color: brown;
+      width: 40%;
+      margin: auto;
+      height: 80%;
+      text-align: center;
+    }
+
+    .announcement {
+      padding: 20px;
+      background: #00000078;
+    }
+    .carousel-nav {
+      position: absolute;
+      top: 30%;
+      cursor: pointer;
+      color: white;
+    }
+    .carousel-nav-left {
+      left: 10px;
+    }
+    .carousel-nav-right {
+      right: 10px;
+    }
+    .disabled-nav {
+      display: none;
+    }
+
+    .carousel-indicators {
+      position: absolute;
+      top: 160px;
+      left: calc(50% - 95px);
+      li {
+        cursor: pointer !important;
+        height: 15px !important;
+        width: 15px !important;
+        margin: 0 2px !important;
+        background-color: #bbb !important;
+        border-radius: 50% !important;
+        display: inline-block !important;
+        transition: background-color 0.6s ease !important;
+        border: none !important;
+        outline: none !important;
+      }
+
+      li:hover,
+      li.active-indicator {
+        background-color: rgb(107, 107, 107) !important;
+      }
+      li:focus {
+        border: none !important;
+        outline: none !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .announcement-container {
+    padding-top: 20px;
+  }
+  .block {
+    background-color: brown;
+    width: 100% !important;
+  }
+}

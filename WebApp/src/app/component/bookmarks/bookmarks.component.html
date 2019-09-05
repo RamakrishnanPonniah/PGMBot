@@ -1,0 +1,44 @@
+<div class="bookmark-container">
+  <div class="bookmark-header">
+    <div class="bookmark-title">KEY WEBSITES / LOCATIONS</div>
+  </div>
+  <div class="bookmark-body">
+    <div class="bookmark-search">
+      <input
+        #search
+        type="text"
+        class="search"
+        placeholder="What you looking for?"
+      />
+    </div>
+    <div class="bookmark-table">
+      <div class="bookmark-table-header-row">
+        <div class="bookmark-table-column bookmark-table-column-1">NAME</div>
+        <div class="bookmark-table-column bookmark-table-column-2">
+          DESCRIPTION
+        </div>
+        <div class="bookmark-table-column bookmark-table-column-1">
+          URL/LINK
+        </div>
+      </div>
+      <div
+        class="bookmark-table-row"
+        *ngFor="let dat of bookmarkTableDisplayData"
+      >
+        <div
+          class="bookmark-table-column bookmark-table-column-1 bookmark-table-align"
+        >
+          {{ dat["name"] }}
+        </div>
+        <div class="bookmark-table-column bookmark-table-column-2">
+          {{ dat["description"] }}
+        </div>
+        <div
+          class="bookmark-table-column bookmark-table-column-1 bookmark-table-align"
+        >
+          <a [href]="dat['url']" target="_blank">Open</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

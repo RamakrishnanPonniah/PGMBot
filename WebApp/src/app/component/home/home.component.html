@@ -1,0 +1,35 @@
+<div class="home-container">
+  <div>
+    <!-- <div>
+      <p>
+        This is our visionary portal to centralize support offered from the PGM
+        Team. We've begun this journey, with the support offerings below. Look
+        forward to more ahead!
+      </p>
+    </div> -->
+  </div>
+  <div class="launch-pad">
+    <div *ngFor="let tab of tabs">
+      <div>
+        <div class="icon">
+          <div>
+            <fa [name]="tab.icon"></fa>
+          </div>
+        </div>
+        <div class="body">
+          <div class="title">
+            {{ tab.title }}
+          </div>
+          <div class="description">
+            {{ tab.description }}
+          </div>
+          <div class="button">
+            <button (click)="navigateToUrl(tab.link)">
+              {{ tab.button }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

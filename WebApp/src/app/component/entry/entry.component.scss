@@ -1,0 +1,105 @@
+.entry-container {
+  position: relative;
+  height: 100%;
+
+  .entry-button {
+    left: 100px;
+    top: 75%;
+    position: absolute;
+    display: block;
+    button {
+      background-color: #ffffff;
+      color: black;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 22px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border: solid transparent 0px;
+      box-shadow: 0px 0px 10px white;
+    }
+
+    button:hover {
+      box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.5);
+    }
+  }
+  .mobile-entry-button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .entry-button {
+    display: none !important;
+  }
+  .mobile-entry-button {
+    background-color: #ffffff;
+    color: black;
+    display: block !important;
+    position: absolute;
+    top: 47%;
+    left: calc(35vw);
+  }
+  .home-logo {
+    display: none;
+    left: calc(50vw - 73px);
+    top: 3%;
+    position: absolute;
+    width: 50%;
+  }
+  .home-line-1 {
+    left: calc(20vw - 8px);
+    top: 35%;
+    position: absolute;
+    width: 70%;
+    z-index: 1;
+  }
+  .home-line-2 {
+    left: calc(32vw - 8px);
+    top: 42%;
+    position: absolute;
+    width: 42%;
+    z-index: 1;
+  }
+  button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: solid transparent 0px;
+    box-shadow: 0px 0px 10px white;
+  }
+
+  button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .home-logo {
+    left: 95px;
+    top: 3%;
+    position: absolute;
+    width: 15%;
+  }
+  .home-line-1 {
+    left: 100px;
+    top: 43%;
+    position: absolute;
+    width: 45%;
+    z-index: 1;
+  }
+  .home-line-2 {
+    left: 100px;
+    top: 58%;
+    position: absolute;
+    width: 27%;
+    z-index: 1;
+  }
+}
