@@ -13,7 +13,7 @@ export class HeaderComponent implements OnDestroy {
   isNavAllowed: boolean = false;
   routeData = {
     home: { link: "/home", name: "Home" },
-    announcement: { link: "/announcement", name: "Announcement" },
+    announcement: { link: "/announcement", name: "Announcements" },
     reminders: { link: "/reminders", name: "Reminders" },
     bookmarks: { link: "bookmarks", name: "Bookmarks" },
     vaman: { link: "vaman", name: "Vaman" }

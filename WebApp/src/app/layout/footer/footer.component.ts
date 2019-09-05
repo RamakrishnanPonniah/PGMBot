@@ -39,7 +39,7 @@ export class FooterComponent implements OnInit {
         let component: string = event.url;
         component = component.substring(1, component.length);
         this.routeOptions = this.routeAllLinks[component];
-        if (component == 'login' || component == 'register') {
+        if (component == 'login' || component == 'register' || component == '') {
           this.isLogOut = false;
         }
         else this.isLogOut = true;
