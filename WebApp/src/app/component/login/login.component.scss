@@ -2,9 +2,10 @@
   display: flex;
   height: 100%;
   overflow: hidden;
-  >div{
-    flex:1;
-  }
+}
+
+h1,p{
+  padding-left: 10px;
 }
 
 input[type=text],input[type=email],input[type=password], select {
@@ -18,7 +19,7 @@ input[type=text],input[type=email],input[type=password], select {
   }
   
   button[type=submit] {
-    width: 100%;
+    width: 50%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;

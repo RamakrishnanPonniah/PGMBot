@@ -18,35 +18,22 @@
     <div class="vaman-box-main">
       <div class="vaman-message-bottom" #bottom></div>
       <ng-container *ngFor="let message of messages">
-        <div
-          class="vaman-message"
-          [class.vaman-message-received]="message.type === 'received'"
-          [@fadeIn]
-          [class.vaman-message-sent]="message.type === 'sent'"
-        >
+        <div class="vaman-message" [class.vaman-message-received]="message.type === 'received'" [@fadeIn]
+          [class.vaman-message-sent]="message.type === 'sent'">
           <div>
-            <vaman-avatar
-              [image]="message.from.avatar"
-              class="vaman-message-from-avatar"
-            ></vaman-avatar>
-            <div
-              [appVamanMarkedDown]="message.text"
-              class="vaman-message-text"
-            ></div>
+            <vaman-avatar [image]="message.from.avatar" class="vaman-message-from-avatar"></vaman-avatar>
+            <div [appVamanMarkedDown]="message.text" class="vaman-message-text"></div>
           </div>
           <div class="vaman-message-date">
             {{ message.date | date: "short" }}
           </div>
           <div class="vaman-quick-replies">
-            <div
-              *ngFor="let reply of message.quick_replies"
-              (click)="
+            <div *ngFor="let reply of message.quick_replies" (click)="
                 sendMessage({
                   message: reply.title,
                   quick_reply: reply.payload
                 })
-              "
-            >
+              ">
               <div>{{ reply.title }}</div>
             </div>
           </div>
@@ -54,12 +41,8 @@
       </ng-container>
     </div>
     <div class="vaman-box-footer">
-      <vaman-input
-        (send)="sendMessage($event)"
-        (dismiss)="toggleChat()"
-        [focus]="focus"
-        [inputText]="inputText"
-      ></vaman-input>
+      <vaman-input (send)="sendMessage($event)" (dismiss)="toggleChat()" [focus]="focus" [inputText]="inputText">
+      </vaman-input>
     </div>
   </div>
   <!-- <button class="vaman-button" (click)="toggleChat()">
@@ -72,11 +55,7 @@
     <div class="topics-header">
       TOPICS TO ASK FOR
     </div>
-    <div
-      class="topics"
-      *ngFor="let topic of topics"
-      (click)="showSubTopics(topic)"
-    >
+    <div class="topics" *ngFor="let topic of topics" (click)="showSubTopics(topic)">
       <div>
         <div>{{ topic }}</div>
         <!-- <span><fa name="chevron-right"></fa></span> -->
@@ -85,15 +64,13 @@
   </div>
   <div class="web-topics-list" *ngIf="showTopic">
     <div class="web-topics-header" (click)="closeSubTopic()">
-      <span><fa name="chevron-left"></fa></span>
-      {{ this.selectedTopic }}
+      <span>
+        <fa name="chevron-left"></fa>
+      </span>
+      {{ this.selectedTopic | uppercase  }}
     </div>
     <div class="web-sub-topic-list">
-      <div
-        class="web-sub-topics"
-        *ngFor="let subTopic of subTopics"
-        (click)="setInputText(subTopic)"
-      >
+      <div class="web-sub-topics" *ngFor="let subTopic of subTopics" (click)="setInputText(subTopic)">
         <div>{{ subTopic }}</div>
       </div>
     </div>
@@ -105,11 +82,7 @@
       <fa name="times"></fa>
     </div>
     <div class="sub-topic-list">
-      <div
-        class="sub-topics"
-        *ngFor="let subTopic of subTopics"
-        (click)="setInputText(subTopic)"
-      >
+      <div class="sub-topics" *ngFor="let subTopic of subTopics" (click)="setInputText(subTopic)">
         <div>{{ subTopic }}</div>
       </div>
     </div>
@@ -121,11 +94,7 @@
     <fa *ngIf="openSideBar" name="angle-double-left"></fa>
   </div>
   <div class="mobile-topics-container">
-    <div
-      class="mobile-topics"
-      *ngFor="let topic of topics"
-      (click)="openModal(topic)"
-    >
+    <div class="mobile-topics" *ngFor="let topic of topics" (click)="openModal(topic)">
       <div>{{ topic }}</div>
     </div>
   </div>
