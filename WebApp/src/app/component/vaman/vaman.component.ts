@@ -128,7 +128,7 @@ export class VamanComponent implements OnInit {
   public botAvatar: string = `../../assets/images/bot.jpg`;
   public userAvatar: string = `../../assets/images/user.png`;
   // public url: string = "http://localhost:5000";https://5d0e23cd.ap.ngrok.io
-  public url: string = "https://97ca9371.ap.ngrok.io";
+  public url: string = "https://abede969.ap.ngrok.io/";
   public startingMessage: string = "Hi, how can we help you?";
   public opened: boolean = true;
 
