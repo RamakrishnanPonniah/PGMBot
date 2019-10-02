@@ -3,7 +3,8 @@
     <div *ngFor="let link of routeOptions">
       <a class="btn btn-primary btn-lg" (click)="navigateToUrl(link)">
         <span class="glyphicon glyphicon-home"></span>
-        {{ routeData[link].name }}
+        <strong>
+          {{ routeData[link].name }}</strong>
       </a>
     </div>
   </div>
@@ -21,8 +22,8 @@
       </a>
     </div>
     <div class="contact-us">
-      <a class="contact-us-link" href="mailto:BOFA.PGM@accenture.com" target="_self" data-content="kh.pgm@acc.com"
-        data-type="mail" role="button">
+      <a class="contact-us-link" href="mailto:BOFA.PGM@accenture.com" target="_self" data-content="kh.pgm@acc.com" data-type="mail"
+        role="button">
         <span>Contact Us</span>
       </a>
     </div>
@@ -34,8 +35,8 @@
       </a>
     </div>
     <div>
-      <a class="contact-us-link" href="mailto:BOFA.PGM@accenture.com" target="_self" data-content="kh.pgm@acc.com"
-        data-type="mail" role="button">
+      <a class="contact-us-link" href="mailto:BOFA.PGM@accenture.com" target="_self" data-content="kh.pgm@acc.com" data-type="mail"
+        role="button">
         <span>Contact Us</span>
       </a>
     </div>
@@ -50,13 +51,12 @@
     <form>
       <div class="feedback-form-group">
         <label for="feedback-recipient-name" class="feedback-col-form-label">Title:</label>
-        <input type="text" maxlength="200" placeholder="Please enter the title..." class="feedback-form-control"
-          id="recipient-name" />
+        <input type="text" maxlength="200" placeholder="Please enter the title..." class="feedback-form-control" id="recipient-name"
+        />
       </div>
       <div class="feedback-form-group">
         <label for="feedback-message-text" class="feedback-col-form-label">Your Detailed Feedback :</label>
-        <textarea class="feedback-form-control" maxlength="500" id="message-text" required=""
-          placeholder="Please write your feedback here..."></textarea>
+        <textarea class="feedback-form-control" maxlength="500" id="message-text" required="" placeholder="Please write your feedback here..."></textarea>
       </div>
     </form>
   </div>
