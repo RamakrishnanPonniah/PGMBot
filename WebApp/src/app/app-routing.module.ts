@@ -13,17 +13,31 @@ import { AdminComponent } from 'src/app/component/admin/admin.component';
 
 // 
 
+// const routes: Routes = [
+//   { component: LoginComponent, path: "login" },
+//   { component: AdminComponent, path: 'admin', canActivate: [AuthGuardService] },
+//   { component: RegisterComponent, path: "register" },
+//   { component: VamanComponent, path: "vaman", canActivate: [AuthGuardService] },
+//   { component: BookmarksComponent, path: "bookmarks", canActivate: [AuthGuardService] },
+//   { component: EntryComponent, path: "entry", canActivate: [AuthGuardService] },
+//   { component: HomeComponent, path: "home", canActivate: [AuthGuardService] },
+//   { component: RemindersComponent, path: "reminders", canActivate: [AuthGuardService] },
+//   { component: AnnouncementComponent, path: "announcement", canActivate: [AuthGuardService] },
+//   { path: "", redirectTo: "/login", pathMatch: "full" }
+// ];
+
+
 const routes: Routes = [
   { component: LoginComponent, path: "login" },
-  { component: AdminComponent, path: 'admin', canActivate: [AuthGuardService] },
+  { component: AdminComponent, path: 'admin' },
   { component: RegisterComponent, path: "register" },
-  { component: VamanComponent, path: "vaman", canActivate: [AuthGuardService] },
-  { component: BookmarksComponent, path: "bookmarks", canActivate: [AuthGuardService] },
-  { component: EntryComponent, path: "entry", canActivate: [AuthGuardService] },
-  { component: HomeComponent, path: "home", canActivate: [AuthGuardService] },
-  { component: RemindersComponent, path: "reminders", canActivate: [AuthGuardService] },
-  { component: AnnouncementComponent, path: "announcement", canActivate: [AuthGuardService] },
-  { path: "", redirectTo: "/login", pathMatch: "full" }
+  { component: VamanComponent, path: "vaman" },
+  { component: BookmarksComponent, path: "bookmarks" },
+  { component: EntryComponent, path: "entry" },
+  { component: HomeComponent, path: "home" },
+  { component: RemindersComponent, path: "reminders" },
+  { component: AnnouncementComponent, path: "announcement" },
+  { path: "", redirectTo: "/entry", pathMatch: "full" }
 ];
 
 @NgModule({

@@ -1,11 +1,11 @@
 import { Directive, Input, ElementRef, OnInit, Renderer2 } from "@angular/core";
-import * as marked from "marked";
+import * as marked from "../../../assets/JS/marked.js";
 @Directive({
   selector: "[appVamanMarkedDown]"
 })
 export class VamanMarkedDownDirective implements OnInit {
   @Input("appVamanMarkedDown") markDownText: string;
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit() {
     const markText = this.markDownText;
