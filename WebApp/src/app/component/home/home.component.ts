@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   tabs = [
     {
       icon: "bullhorn",
-      title: "Announcements",
+      title: "Announcement",
       description: "From Bank & Accenture",
       button: "VIEW",
       link: "/announcement"
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
       link: "/bookmarks"
     }
   ];
-  constructor(private router: Router, private title:Title) {}
+  constructor(private router: Router, private title: Title) { }
 
   ngOnInit() {
     this.title.setTitle("KH-PGM: Launch");

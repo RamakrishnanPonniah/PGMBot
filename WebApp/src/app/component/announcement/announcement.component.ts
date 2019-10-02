@@ -19,10 +19,10 @@ export class AnnouncementComponent implements OnInit {
     nextSlide: 1
   };
 
-  constructor(private title:Title) {}
+  constructor(private title: Title) { }
 
   ngOnInit() {
-    this.title.setTitle("KH-PGM: Announcements");
+    this.title.setTitle("KH-PGM: Announcement");
   }
 
   moveRight(carousel) {

@@ -1,22 +1,16 @@
 <div class="announcement-container">
   <div class="announcement-header">
-    <div class="announcement-title">Announcements</div>
+    <div class="announcement-title">Announcement</div>
     <div class="announcement-description">
-      Watch out for important communications here from PGM Team on updates from
-      Bank and/or Acc on process,controls, infrastructure, environment, SLA, org
-      changes, etc.
+      Watch out for important communications here from PGM Team on updates from Bank and/or Acc on process,controls, infrastructure,
+      environment, SLA, org changes, etc.
     </div>
   </div>
 
   <div class="carousel-container">
     <div class="carousel-slide">
-      <div
-        class="slide"
-        *ngFor="let slide of slides; let i = index"
-        [class.current-slide]="announcementCarouselFirst.currentSlide == i"
-        [class.previous-slide]="announcementCarouselFirst.previousSlide == i"
-        [class.next-slide]="announcementCarouselFirst.nextSlide == i"
-      >
+      <div class="slide" *ngFor="let slide of slides; let i = index" [class.current-slide]="announcementCarouselFirst.currentSlide == i"
+        [class.previous-slide]="announcementCarouselFirst.previousSlide == i" [class.next-slide]="announcementCarouselFirst.nextSlide == i">
         <div class="announcement announcement1">
           <div class="block">
             <h1 class="article">Article {{ slide }}</h1>
@@ -25,44 +19,27 @@
         </div>
       </div>
     </div>
-    <div
-      class="carousel-nav carousel-nav-left"
-      (click)="moveLeft(announcementCarouselFirst)"
-      [class.disabled-nav]="
+    <div class="carousel-nav carousel-nav-left" (click)="moveLeft(announcementCarouselFirst)" [class.disabled-nav]="
         slides.length < 2 || announcementCarouselFirst.previousSlide == -1
-      "
-    >
+      ">
       <fa name="chevron-left"></fa>
     </div>
-    <div
-      class="carousel-nav carousel-nav-right"
-      (click)="moveRight(announcementCarouselFirst)"
-      [class.disabled-nav]="
+    <div class="carousel-nav carousel-nav-right" (click)="moveRight(announcementCarouselFirst)" [class.disabled-nav]="
         slides.length < 2 || announcementCarouselFirst.nextSlide == -1
-      "
-    >
+      ">
       <fa name="chevron-right"></fa>
     </div>
     <div class="carousel-indicators">
       <ol>
-        <li
-          [class.active-indicator]="announcementCarouselFirst.currentSlide == i"
-          *ngFor="let slide of slides; let i = index"
-          (click)="changeSlide(i, announcementCarouselFirst)"
-        ></li>
+        <li [class.active-indicator]="announcementCarouselFirst.currentSlide == i" *ngFor="let slide of slides; let i = index" (click)="changeSlide(i, announcementCarouselFirst)"></li>
       </ol>
     </div>
   </div>
 
   <div class="carousel-container">
     <div class="carousel-slide">
-      <div
-        class="slide"
-        *ngFor="let slide of slides; let i = index"
-        [class.current-slide]="announcementCarouselSecond.currentSlide == i"
-        [class.previous-slide]="announcementCarouselSecond.previousSlide == i"
-        [class.next-slide]="announcementCarouselSecond.nextSlide == i"
-      >
+      <div class="slide" *ngFor="let slide of slides; let i = index" [class.current-slide]="announcementCarouselSecond.currentSlide == i"
+        [class.previous-slide]="announcementCarouselSecond.previousSlide == i" [class.next-slide]="announcementCarouselSecond.nextSlide == i">
         <div class="announcement announcement1">
           <div class="block">
             <h1 class="article">Article {{ slide }}</h1>
@@ -71,33 +48,21 @@
         </div>
       </div>
     </div>
-    <div
-      class="carousel-nav carousel-nav-left"
-      (click)="moveLeft(announcementCarouselSecond)"
-      [class.disabled-nav]="
+    <div class="carousel-nav carousel-nav-left" (click)="moveLeft(announcementCarouselSecond)" [class.disabled-nav]="
         slides.length < 2 || announcementCarouselSecond.previousSlide == -1
-      "
-    >
+      ">
       <fa name="chevron-left"></fa>
     </div>
-    <div
-      class="carousel-nav carousel-nav-right"
-      (click)="moveRight(announcementCarouselSecond)"
-      [class.disabled-nav]="
+    <div class="carousel-nav carousel-nav-right" (click)="moveRight(announcementCarouselSecond)" [class.disabled-nav]="
         slides.length < 2 || announcementCarouselSecond.nextSlide == -1
-      "
-    >
+      ">
       <fa name="chevron-right"></fa>
     </div>
     <div class="carousel-indicators">
       <ol>
-        <li
-          [class.active-indicator]="
+        <li [class.active-indicator]="
             announcementCarouselSecond.currentSlide == i
-          "
-          *ngFor="let slide of slides; let i = index"
-          (click)="changeSlide(i, announcementCarouselSecond)"
-        ></li>
+          " *ngFor="let slide of slides; let i = index" (click)="changeSlide(i, announcementCarouselSecond)"></li>
       </ol>
     </div>
   </div>

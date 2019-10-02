@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
   isLogOut = true;
   routeData = {
     home: { link: "/home", name: "Home" },
-    announcement: { link: "/announcement", name: "Announcements" },
+    announcement: { link: "/announcement", name: "Announcement" },
     reminders: { link: "/reminders", name: "Reminders" },
     bookmarks: { link: "bookmarks", name: "Bookmarks" },
     vaman: { link: "vaman", name: "VAMAN" }
