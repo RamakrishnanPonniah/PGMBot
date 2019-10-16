@@ -116,6 +116,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "vaman:serve:production"
+            },
+            "es5": {
+              "devServerTarget": "vaman:build:es5"
             }
           }
         }
